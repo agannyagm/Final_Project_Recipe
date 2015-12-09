@@ -95,13 +95,14 @@ header nav {
     color: white;
 }
 header nav , header nav ul{
-     float: left;
+     float: right;
 }
 
 header nav li{
     display: inline;
-        padding: 0 0.5em;
-        text-align: left;
+    padding: 0 0.5em;
+    text-align: left;
+    font-size: 1.5em;
 }
 
 a {

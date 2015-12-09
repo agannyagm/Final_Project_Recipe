@@ -3,8 +3,8 @@ $(document).ready(function () {
 
         $('nav').slideToggle(function () {
             $('nav li').css('display', 'inline-block');
-            $('nav').css('float', 'left');
-            $('nav ul').css('float', 'left');
+            $('nav').css('float', 'right');
+            $('nav ul').css('float', 'right');
             $('nav').css('padding', '0em');
         })
 
