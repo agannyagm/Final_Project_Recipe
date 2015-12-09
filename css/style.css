@@ -80,9 +80,12 @@ header h1 {
 header nav {
     color: black;
     width: 30em;
-    float: right;
+   
     text-align: right;
     color: white;
+}
+header nav , header nav ul{
+     float: left;
 }
 
     header nav li {
