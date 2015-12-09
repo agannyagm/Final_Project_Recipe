@@ -90,10 +90,12 @@ header h2{
 
 header nav {
     color: black;
-    width: 30em;
-    float: right;
+    width: 30em;   
     text-align: right;
     color: white;
+}
+header nav , header nav ul{
+     float: left;
 }
 
 header nav li{
