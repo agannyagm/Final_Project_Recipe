@@ -114,11 +114,11 @@ footer {
     position: relative;
     z-index: 150;
     background-color: black;
-    width:100%;
+    width: 100%;
 }
 
-footer nav {
-        width:100%;
+footer nav{
+        width: 100%;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -140,14 +140,14 @@ footer img {
     display: none;
     position: absolute;
     top: .5em;
-    left: .5em;
+    right: .5em;
 }
 
-    .hamburger div {
-        width: 1.5em;
-        height: 0.25em;
+     .hamburger div {
+        width: 2em;
+        height: .5em;
         background-color: white;
-        margin: 0.15em 0em;
+        margin: 0.25em 0em;
         border-radius: 0.15em;
     }
 

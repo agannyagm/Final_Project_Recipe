@@ -184,14 +184,14 @@ footer {
     display: none;
     position: absolute;
     top: .5em;
-    left: .5em;
+    right: .5em;
 }
 
-    .hamburger div {
-        width: 1.5em;
-        height: 0.25em;
+     .hamburger div {
+        width: 2em;
+        height: .5em;
         background-color: white;
-        margin: 0.15em 0em;
+        margin: 0.25em 0em;
         border-radius: 0.15em;
     }
 
@@ -319,37 +319,36 @@ footer {
     body {
         font-size: 15px;
     }
-
-    @media (max-width: 768px) {
-        body {
-            font-size: 10px;
-        }
-
-        header nav {
-            display: none;
-        }
-
-        .hamburger {
-            display: block;
-        }
-
-            .hamburger div {
-                border: 0.05em solid white;
-                display: block;
-            }
-    }
+}
 
 @media (max-width: 768px) {
     body {
-        font-size: 12px;
+        font-size: 10px;
     }
-    footer
-    {
-padding: 1em 4.5em;
+
+    header nav {
+        display: none;
     }
+
+    section {
+        width: 95%;
+    }
+    .foodimage{
+       display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+        .hamburger div {
+            border: 0.05em solid white;
+            display: block;
+        }
+
     aside {
         display: none;
     }
-    section{
-        width:95%;
-    }
+}
