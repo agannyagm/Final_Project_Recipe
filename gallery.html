@@ -6,13 +6,20 @@
     <meta name="keywords" content="one, two, three">
     <title>Gallery</title>
     <!-- external CSS link -->
+    <link rel="icon" type="image/png" href="images/icon.jpg">
     <link rel="stylesheet" href="css/reset.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,800,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster|Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
 	<header class="clearfix">
         <h1><a href="index.html"><img class="icon" alt="Go to Home Page" src="images/icon.jpg"/></a></h1>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
             <ul>
                 <li><a href="about.html">About Me</a></li>
@@ -21,9 +28,12 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section style="border:1px solid black">
         <div id="container">
+            <h1>Rate the Recipes:</h1>
+            <h2 id="name-to-vote-on">Spicy Stir-Fry Potatoes</h2>
             <img id="image-to-vote-on" src="recipe/images/snack1.jpg">
+            
             <div></div>
             <div id="buttons-wrapper">
                 <form>

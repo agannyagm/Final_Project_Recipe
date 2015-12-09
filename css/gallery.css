@@ -45,147 +45,240 @@ Developer @GA in NYC
 /* BASE STYLES
 /*******************************************/
 
+header, section, article, footer, div {
+    box-sizing: border-box;
+}
 
-header, section, article, footer,div
-{
-	box-sizing:border-box;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
-html,body
-{
-    height:100%;
-}
-body
-{
-    background:url(../images/background4.jpg) no-repeat center center fixed;
+
+body {
+    background: url(../images/background4.jpg) no-repeat center center fixed;
     background-size: 100% 100%;
-    font-size:20px;
+    font-size: 20px;
     font-family: "Open-Sans",Arial, sans-serif;
     line-height: 1.4;
     max-width: 1400px;
 }
-header h1
-{
-    font-weight:normal;
-    font-size:2.4em;
-    width: 30%;
+
+header h1 {
+    font-weight: normal;
+    font-size: 2.4em;
+    width: 30em;
     float: left;
     color: white;
-
+    margin-top: 0em;
+    margin-left: 0em;
 }
-nav
+
+header h1 img {
+        width: 7em;
+        height: 3em;
+    }
+
+header nav {
+    color: black;
+    width: 30em;
+    float: right;
+    text-align: right;
+    color: white;
+}
+
+header nav li {
+        display: inline;
+        padding: 0 0.5em;
+        text-align: left;
+    }
+
+a {
+    color: white;
+    font-family: 'Bree Serif', serif;
+}
+a:visited
 {
-	color: black;
-	width: 70%;
-	float: right;
-	text-align: right;
-	padding-top: 8.5em;
-	color: white;
-
+    color:yellow;
 }
-nav li 
+a:hover
 {
-	display: inline;
-	padding: 0 0.5em;
+    color:greenyellow;
 }
-a
+
+
+section 
 {
-	color: white;
+    margin-top:2em;
 }
-
-
 footer {
-clear: both;
-height: 5em;
-position: relative;
-z-index: 150;
-background-color: black;
+    clear: both;
+    height: 3.5em;
+    position: relative;
+    z-index: 150;
+    background-color: black;
+    width: 100%;
 }
 
-footer nav
-{
-   position:absolute;
-   bottom:0;
-   left:0;
-   padding: 1em 5em;
+footer nav{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+    }
+
+footer nav li {
+            display: inline-block;
+            margin: 0 1em;
+        }
+
+footer img {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+.hamburger {
+    display: none;
+    position: absolute;
+    top: .5em;
+    left: .5em;
 }
 
-footer img 
-{
-	width: 1.5em;
-	height: 1.5em;
-}
+.hamburger div {
+        width: 1.5em;
+        height: 0.25em;
+        background-color: white;
+        margin: 0.15em 0em;
+        border-radius: 0.15em;
+    }
+
 /******************************************
 /* LAYOUT                   
 /*******************************************/
 
 /* Center the container */
 #container {
-	margin: auto;
+    margin: auto;
+}
+section
+{
     background: url(../images/background5.jpg) no-repeat center fixed;
     background-size: 100% 100%;
-
 }
 
-#container img
-{
-    padding-top:2em;
-    width:40%;
-    height:40%;
-}
+    #container img {
+        width: 20em;
+        height: 13em;
+        margin: 0em auto;
+        padding-top:.5em;
+    }
 
-#container form
-{
-    padding-bottom:2em;
-}
+#container form {
+        padding-bottom: 2em;
+    }
 /******************************************
 /* ADDITIONAL STYLES                   
 /*******************************************/
-.btn{
-     color: #ffffff;
-     background-color: black;
-     border-color: #357ebd;
-     padding: 0,3em 0.6em;
-     margin-bottom: 0;
-     font-size: 0.7em;
-     font-weight: normal;
-     line-height: 1.5;
-     text-align: center;
-     white-space: nowrap;
-     vertical-align: middle;
-     cursor: pointer;
-     border: 0.05em solid transparent;
-     border-radius: 0.2em;
-     -webkit-user-select: none;
-     -moz-user-select: none;
-     -ms-user-select: none;
-     -o-user-select: none;
-     user-select: none;
+.btn {
+    color: #ffffff;
+    background-color: black;
+    border-color: #357ebd;
+    padding: 0,3em 0.6em;
+    margin-bottom: 0;
+    font-size: 0.7em;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0.05em solid transparent;
+    border-radius: 0.2em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;   
 }
-#image-to-vote-on,#buttons-wrapper{
-     margin: 0 auto;
-     width: 25em;
-     text-align: center;
-     display: block;
+
+#buttons-wrapper form{
+    padding-top:1em;
 }
-#image-to-vote-on{
-     margin-top: 2.5em;
+
+#image-to-vote-on, #buttons-wrapper {
+    margin: 0 auto;
+    width: 25em;
+    text-align: center;
+    display: block;
 }
-#buttons-wrapper{
-     margin-top:1em;
+section h1{
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    font-size:1.2em;
+    font-family: 'Bree Serif', serif;
+    margin-top:.25em;
+    text-decoration:underline;
 }
-#image-to-vote-on+div{
-     text-align: center;
-     font-size: 1.2em;
-     color: black;
+#name-to-vote-on{
+    text-align:center;
+    color:white;
+    font-weight:300;
+    font-size:1em;
+    font-family: 'Bree Serif', serif;
+    margin-top:1em;
 }
+#container div{
+    font-family: 'Bree Serif', serif;
+}
+#image-to-vote-on {
+    margin-top: 2.5em;
+}
+
+#buttons-wrapper {
+    margin-top: 1em;
+}
+
+#image-to-vote-on + div {
+    text-align: center;
+    font-size: 1.2em;
+    color: black;
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+        .hamburger div {
+            border: 0.05em solid white;
+            display: block;
+        }
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 12px;
     }
-    footer
-    {
-padding: 1em 4.5em;
+
+    footer {
+        padding: 1em 4.5em;
     }
+
     aside {
         display: none;
     }

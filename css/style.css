@@ -49,7 +49,10 @@ Developer @GA in NYC
 header, section, article, footer, div {
     box-sizing: border-box;
 }
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {
     background: url(../images/background4.jpg) no-repeat center fixed;
     background-size: 100% 100%;
@@ -61,88 +64,136 @@ body {
 
 header h1 {
     font-weight: normal;
-    font-size: 48px;
-    width: 30%;
+    font-size: 2.4em;
+    width: 30em;
     float: left;
     color: white;
+    margin-top: 0em;
+    margin-left: 0em;
 }
 
-h2 {
-    margin: 2em 0 1em;
-    color: white;
-}
+    header h1 img {
+        width: 7em;
+        height: 3em;
+    }
 
-nav {
+header nav {
     color: black;
-    width: 70%;
+    width: 30em;
     float: right;
     text-align: right;
-    padding-top: 170px;
     color: white;
 }
 
-    nav li {
+    header nav li {
         display: inline;
-        padding: 0 10px;
+        padding: 0 0.5em;
+        text-align: left;
     }
 
 a {
     color: white;
+    font-family: 'Bree Serif', serif;
+}
+a:visited
+{
+    color:yellow;
+}
+a:hover
+{
+    color:greenyellow;
 }
 
+h2 {
+    margin: .5em 0;
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-weight:bolder;
+    font-size:1.5em;
+}
 section {
     width: 65%;
     float: left;
     border: 1px solid black;
+    margin-bottom: 1em;
+    margin-right:1em;
 }
 
 aside {
     width: 29%;
     float: right;
     border: 1px solid black;
-    background-color: white;
-    margin-right: 2em;
+    background: url(../images/asideBackground.jpg) no-repeat center fixed;
+    background-size: 100% 100%;
+    margin-right: 1em;
 }
 
     aside iframe {
         width: 100%;
-        height: 20%;
+        height: 8em;
+        margin:1em 0em;
     }
-
+    aside :first-child iframe
+    {
+        margin-top:0em;
+    }
+    aside:last-child iframe
+    {
+        margin-bottom:0em;
+    }
+  aside :last-child
+  {
+      margin-bottom:0em;
+  }
 section div img {
     max-width: 100%;
     max-height: 100%;
 }
 
-#footer_push {
-    clear: both;
-    height: 50px;
-}
-
 footer {
     clear: both;
-    height: 100px;
+    height: 3.5em;
     position: relative;
     z-index: 150;
     background-color: black;
+    width:100%;
 }
 
     footer nav {
+        width:100%;
         position: absolute;
         bottom: 0;
         left: 0;
-        padding: 1em 5em;
+        text-align: center;
     }
+
+        footer nav li {
+            display: inline-block;
+            margin: 0 1em;
+        }
 
     footer img {
         width: 1.5em;
         height: 1.5em;
     }
 
-object {
-    width: 100%;
-    max-height: 100%;
+.hamburger {
+    display: none;
+    position: absolute;
+    top: .5em;
+    left: .5em;
 }
+
+    .hamburger div {
+        width: 1.5em;
+        height: 0.25em;
+        background-color: white;
+        margin: 0.15em 0em;
+        border-radius: 0.15em;
+    }
+
+
+
 
 /* carrosel*/
 .carousel-showmanymoveone .carousel-control {
@@ -258,8 +309,32 @@ object {
 }
 
 .container {
-    margin-bottom: 50px;
+    margin-bottom: 2.5em;
 }
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            font-size: 0.75em;
+        }
+
+        header nav {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+            .hamburger div {
+                border: 0.05em solid white;
+                display: block;
+            }
+    }
 
 @media (max-width: 768px) {
     body {

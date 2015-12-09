@@ -51,7 +51,8 @@ header, section, article, footer, div {
 }
 
 html, body {
-    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -63,13 +64,65 @@ body {
     color: white;
 }
 
-h1 {
-    align-content: center;
+header h1 {
+    font-weight: normal;
+    font-size: 2.4em;
+    width: 30em;
+    float: left;
+    color: white;
+    margin-top: 0em;
+    margin-left: 0em;
+}
+
+    header h1 img {
+        width: 7em;
+        height: 3em;
+    }
+
+header h2 {
     font-size: 1.3em;
     font-weight: bolder;
     text-decoration: underline;
     text-align: center;
-    margin: 1em;
+    float: left;
+    width: 30%;
+    padding-top: .05em;
+}
+
+header nav {
+    color: black;
+    width: 30em;
+    float: right;
+    text-align: right;
+    color: white;
+}
+
+    header nav li {
+        display: inline;
+        padding: 0 0.5em;
+        text-align: left;
+    }
+
+a {
+    color: white;
+    font-family: 'Bree Serif', serif;
+}
+a:visited
+{
+    color:yellow;
+}
+a:hover
+{
+    color:greenyellow;
+}
+
+
+section h1 {
+    font-size: 1.3em;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom:.5em;
 }
 
 p {
@@ -78,24 +131,99 @@ p {
     margin-right: 13%;
 }
 
-img {
-    width: 40%;
-    margin: 1% 25%;
-    height: 40%;
+section div {
+    width: 100%;
+}
+
+section img {
+    width: 25em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 15em;
 }
 
 section {
     margin-left: 3em;
+    margin-bottom: 3em;
+    margin-right: 8em;
 }
 
-h2 {
+section h2 {
     color: white;
     font-weight: bold;
     text-decoration: underline;
-    margin-top:2%;
+    margin-top: 1em;
 }
 
 ul {
-    list-style-type: disc;
+    list-style-type: square;
     color: white;
 }
+
+footer {
+    clear: both;
+    height: 3.5em;
+    position: relative;
+    z-index: 150;
+    background-color: black;
+    width:100%;
+}
+
+    footer nav {
+        width:100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+    }
+
+        footer nav li {
+            display: inline-block;
+            margin: 0 1em;
+        }
+
+    footer img {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+.hamburger {
+    display: none;
+    position: absolute;
+    top: .5em;
+    left: .5em;
+}
+
+    .hamburger div {
+        width: 1.5em;
+        height: 0.25em;
+        background-color: white;
+        margin: 0.15em 0em;
+        border-radius: 0.15em;
+    }
+
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            font-size: 0.75em;
+        }
+
+        header nav {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+            .hamburger div {
+                border: 0.05em solid white;
+                display: block;
+            }
+    }
