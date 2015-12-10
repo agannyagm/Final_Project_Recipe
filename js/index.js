@@ -6,6 +6,7 @@
     //$('#carouselABC').carousel({ interval: 3600 });
 }());
 
+//carousel the image to be slided 
 (function () {
     $('.carousel-showmanymoveone .item').each(function () {
         var itemToClone = $(this);
@@ -26,14 +27,16 @@
     });
 }());
 
+//hamburger icon for the header navigation
 $(document).ready(function () {
     $('.hamburger').click(function () {
 
         $('nav').slideToggle(function () {
-            $('nav li').css('display', 'inline');
-            $('nav').css('float', 'right');
-            $('nav ul').css('float', 'right');
-            $('nav').css('padding', '0em');
+            $('header nav li').css('display', 'inline');
+            $('footer nav').css('display', 'inline');
+            $('header nav').css('float', 'right');
+            $('header nav ul').css('float', 'right');
+            $('header nav').css('padding', '0em');
         })
 
     })

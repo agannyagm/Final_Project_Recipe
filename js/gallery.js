@@ -1,6 +1,8 @@
+//array of image paths
 var images = ["recipe/images/snack1.jpg", "recipe/images/snack2.jpg", "recipe/images/snack3.jpg", "recipe/images/snack4.jpg",
     "recipe/images/snack5.jpg", "recipe/images/dessert1.jpg", "recipe/images/dessert2.jpg", "recipe/images/dessert3.jpg", "recipe/images/dessert4.jpg",
     "recipe/images/dessert5.jpg", "recipe/images/bread1.jpg", "recipe/images/bread2.jpg", "recipe/images/bread3.jpg", "recipe/images/bread4.jpg"];
+//array of food name paths
 var RecipeNames = ["Spicy Stir-Fry Potatoes", "Mixed Vegetable Pakoras", "Khaman Dhokla", "Aloo Chana Chaat", "Masala Vada", "Kesar Peda",
     "Seviyan Kheer", "Carrot Burfi", "Wheat Flour Halwa", "Bottle Gourd Halwa", "Tawa Naan",
     "Indian Fried Bread", "Spicy Pancakes", "Bread Uttapam", "Bread Uttapam"];
@@ -42,23 +44,28 @@ $(document).ready(function () {
     $("#your-vote").on("change", function () {
         if (i < images.length) {
             votes[i] = $("#your-vote").val();
+            //changing the image and the name while vote is being casted
             nextImage();
             nextName();
         }
     });
+    //event delegation for the Skip and Next Button
     $("#buttons-wrapper .btn[value='Skip']").on("click", nextImage);
     $("#buttons-wrapper .btn[value='Skip']").on("click", nextName);
-    $("#buttons-wrapper .btn[value='Back']").on("click", previousImage,previousName);
+    $("#buttons-wrapper .btn[value='Back']").on("click", previousImage);
+    $("#buttons-wrapper .btn[value='Back']").on("click", previousName);
 });
 
+//Hamburger icon jquery
 $(document).ready(function () {
     $('.hamburger').click(function () {
 
         $('nav').slideToggle(function () {
-            $('nav li').css('display', 'inline');
-            $('nav').css('float', 'right');
-            $('nav ul').css('float', 'right');
-            $('nav').css('padding', '0em');
+            $('header nav li').css('display', 'inline');
+            $('footer nav').css('display', 'inline');
+            $('header nav').css('float', 'right');
+            $('header nav ul').css('float', 'right');
+            $('header nav').css('padding', '0em');
         })
 
     })

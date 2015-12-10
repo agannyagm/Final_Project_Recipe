@@ -112,14 +112,16 @@ a:hover
 section 
 {
     margin-top:2em;
+    width:100%;
 }
 footer {
     clear: both;
     height: 3.5em;
+    width:100%;
     position: relative;
-    z-index: 150;
+    bottom: 0;
+    left: 0;
     background-color: black;
-    width: 100%;
 }
 
 footer nav{
@@ -271,18 +273,4 @@ section h1{
             border: 0.05em solid white;
             display: block;
         }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 12px;
-    }
-
-    footer {
-        padding: 1em 4.5em;
-    }
-
-    aside {
-        display: none;
-    }
 }

@@ -181,6 +181,10 @@ footer nav li{
     display: inline-block;
     margin: 0 1em;
 }
+footer nav img
+{
+     margin: .6em;
+}
 
 footer img{
     width: 1.5em;
